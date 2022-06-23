@@ -1,4 +1,4 @@
-//
+// 使用「epoll定时」与「升序链表」处理非活动链接
 #include <sys/types.h>
 #include <sys/socket.h>
 #include <netinet/in.h>
