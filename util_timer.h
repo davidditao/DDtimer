@@ -28,7 +28,7 @@ public:
 public:
     time_t expire;          // 任务超时时间，这里使用绝对时间
     callback cb_func;       // 任务回调函数
-    client_data *user_data; // 回调函数处理的客户数据，由定时器的执行着传递给回调函数
+    client_data *user_data; // 回调函数处理的客户数据，由定时器的执行者传递给回调函数
     util_timer *prev;       // 指向前一个定时器
     util_timer *next;       // 指向后一个定时器
 };
