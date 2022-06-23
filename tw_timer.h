@@ -6,7 +6,7 @@
 
 class tw_timer;
 
-/* 用户数据结构 */
+/* 用户数据结构：绑定 socket 和 定时器 */
 struct client_data
 {
     sockaddr_in address;    // 客户端地址
@@ -21,10 +21,14 @@ class tw_timer
     using callback = std::function<void(client_data *data)>;
 
 public:
-private:
-    client_data *user_data; // 客户数据
-    callback cb; // 任务回调函数 
-    tw_timer *prev; // 指向前一个定时器
-    tw_timer *next; // 指向后一个定时器
+    tw_timer(int rot, int ts)
+        : rotation(rot), time_slot(ts), prev(nullptr), next(nullptr) {}
 
+public:
+    int rotation;           // 记录定时器在时间轮转过多少圈后生效
+    int time_slot;          // 记录定时器属于时间轮上的那个槽
+    client_data *user_data; // 客户数据
+    callback cb_func;       // 定时器回调函数
+    tw_timer *prev;         // 指向前一个定时器
+    tw_timer *next;         // 指向后一个定时器
 };

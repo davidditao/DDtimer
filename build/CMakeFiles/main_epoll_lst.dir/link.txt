@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/main_epoll_lst.dir/main_epoll_lst.cpp.o  -o main_epoll_lst 

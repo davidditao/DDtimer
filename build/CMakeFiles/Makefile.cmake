@@ -42,6 +42,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/main_signal.dir/DependInfo.cmake"
-  "CMakeFiles/main_epoll.dir/DependInfo.cmake"
+  "CMakeFiles/main_epoll_tw.dir/DependInfo.cmake"
+  "CMakeFiles/main_signal_lst.dir/DependInfo.cmake"
+  "CMakeFiles/main_epoll_lst.dir/DependInfo.cmake"
   )
